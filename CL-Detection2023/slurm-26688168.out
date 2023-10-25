@@ -1,0 +1,88 @@
+Loading rhel8/default-amp
+  Loading requirement: dot rhel8/slurm singularity/current rhel8/global
+    cuda/11.4 libpciaccess/0.16/gcc-9.4.0-6fonbj6
+    libiconv/1.16/gcc-9.4.0-ahebbov libxml2/2.9.12/gcc-9.4.0-gnknt5e
+    ncurses/6.2/gcc-9.4.0-aiirok7 hwloc/2.5.0/gcc-9.4.0-7sqomga
+    libevent/2.1.12/gcc-9.4.0-hgny7cm numactl/2.0.14/gcc-9.4.0-52dwc6n
+    cuda/11.4.0/gcc-9.4.0-3hnxhjt gdrcopy/2.2/gcc-9.4.0-e4igtfp
+    knem/1.1.4/gcc-9.4.0-bpbxgva libnl/3.3.0/gcc-9.4.0-whwhrwb
+    rdma-core/34.0/gcc-9.4.0-5eo5n2u ucx/1.11.1/gcc-9.4.0-lktqyl4
+    openmpi/4.1.1/gcc-9.4.0-epagguv
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/condabin/conda
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/bin/conda
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/bin/conda-env
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/bin/activate
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/bin/deactivate
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/etc/profile.d/conda.sh
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/etc/fish/conf.d/conda.fish
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/shell/condabin/Conda.psm1
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/shell/condabin/conda-hook.ps1
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/lib/python3.7/site-packages/xontrib/conda.xsh
+no change     /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/etc/profile.d/conda.csh
+no change     /home/hpcpin1/.bashrc
+No action taken.
+flatpak: symbol lookup error: /lib64/libk5crypto.so.3: undefined symbol: EVP_KDF_ctrl, version OPENSSL_1_1_1b
+
+     active environment : torch2
+    active env location : /home/hpcpin1/.conda/envs/torch2
+            shell level : 1
+       user config file : /home/hpcpin1/.condarc
+ populated config files : 
+          conda version : 4.7.12
+    conda-build version : not installed
+         python version : 3.7.4.final.0
+       virtual packages : __cuda=12.2
+       base environment : /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh  (read only)
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/pkgs
+                          /home/hpcpin1/.conda/pkgs
+       envs directories : /home/hpcpin1/.conda/envs
+                          /usr/local/software/archive/linux-scientific7-x86_64/gcc-9/miniconda3-4.7.12.1-rmuek6r3f6p3v6fdj7o2klyzta3qhslh/envs
+               platform : linux-64
+             user-agent : conda/4.7.12 requests/2.31.0 CPython/3.7.4 Linux/4.18.0-477.21.1.el8_8.x86_64 rocky/8.8 glibc/2.28
+                UID:GID : 45163:45169
+             netrc file : None
+           offline mode : False
+
+Changed directory to /rds/user/hpcpin1/hpc-work/CL-Detection2023.
+
+JobID: 26688168
+======
+Time: Thu  7 Sep 03:05:19 BST 2023
+Running on master node: gpu-q-74
+Current directory: /rds/user/hpcpin1/hpc-work/CL-Detection2023
+
+Nodes allocated:
+================
+gpu-q-74
+
+numtasks=1, numnodes=1, mpi_tasks_per_node=1 (OMP_NUM_THREADS=1)
+
+Executing command:
+==================
+python step2_train_and_valid.py --train_csv_path='../SegProject/Datasets/Cytomine/Cephalo/Train' --valid_csv_file='../SegProject/Datasets/Cytomine/Cephalo/Val' --batch_size=4 --cuda_id=0 --save_model_dir='./model/' 
+
+usage: step2_train_and_valid.py [-h] [--train_csv_path TRAIN_CSV_PATH]
+                                [--valid_csv_path VALID_CSV_PATH]
+                                [--image_width IMAGE_WIDTH]
+                                [--image_height IMAGE_HEIGHT]
+                                [--cuda_id CUDA_ID] [--model_name MODEL_NAME]
+                                [--train_max_epoch TRAIN_MAX_EPOCH]
+                                [--batch_size BATCH_SIZE]
+                                [--batch_size_valid BATCH_SIZE_VALID]
+                                [--num_workers NUM_WORKERS]
+                                [--save_model_step SAVE_MODEL_STEP]
+                                [--flip_augmentation_prob FLIP_AUGMENTATION_PROB]
+                                [--loss_name LOSS_NAME]
+                                [--epoch_patience EPOCH_PATIENCE] [--lr LR]
+                                [--beta1 BETA1] [--beta2 BETA2]
+                                [--scheduler_step_size SCHEDULER_STEP_SIZE]
+                                [--scheduler_gamma SCHEDULER_GAMMA]
+                                [--save_model_dir SAVE_MODEL_DIR]
+step2_train_and_valid.py: error: unrecognized arguments: --valid_csv_file=../SegProject/Datasets/Cytomine/Cephalo/Val
+current directory : /rds/user/hpcpin1/hpc-work/CL-Detection2023
+['/rds/user/hpcpin1/hpc-work/CL-Detection2023', '/rds/user/hpcpin1/hpc-work/SegProject', '/home/hpcpin1/.conda/envs/torch2/lib/python310.zip', '/home/hpcpin1/.conda/envs/torch2/lib/python3.10', '/home/hpcpin1/.conda/envs/torch2/lib/python3.10/lib-dynload', '/home/hpcpin1/.conda/envs/torch2/lib/python3.10/site-packages']
+End Time: Thu  7 Sep 03:06:31 BST 2023
